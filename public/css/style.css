@@ -2,3 +2,7 @@
     font-size: 2em;
     text-align: right;
 }
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
