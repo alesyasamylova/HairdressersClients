@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>My Clients</title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 <body>
-    <ul>
-        <li>Vasya Pupkin</li>
-        <li>Nataliia Popova</li>
-        <li>Svetlana Boyko</li>
-    </ul>
+    <div class="header-info">
+        <span><a href="index.html">My Profile</a></span>
+        <span> My Clients</span>
+    </div>
+    <form>
+        <input type="search" id="your-clients-filter" name="q" placeholder="Find a client...">
+        <input type="button" value="New client" onclick="window.location.href='newclient.html';">
+    </form>
+    <div class="clients-list">
+        <ul>
+            <li><a href="clientinfo.html">Vasya Pupkin</a> </li>
+            <li><a href="clientinfo.html">Nataliia Popova</a></li>
+            <li><a href="clientinfo.html">Svetlana Boyko</a></li>
+        </ul>
+    </div>
 
 </body>
 </html>
