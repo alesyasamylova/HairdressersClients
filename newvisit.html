@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New visit</title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+</head>
+<body>
+    <div class="header-info">
+        <span><a href="index.html">My Profile</a></span>
+        <span><a href="myclients.html">My Clients</a></span>
+    </div>
+    <h2>Visit of <a href="clientinfo.html">Vasya Pupkin</a></h2>
+    <table>
+        <thead>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Type of Service</th>
+            <th>Note</th>
+            <th>Cost</th>
+            <th>Duration</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="date" id="visitId"></td>
+                <td><input type="time" id="visitTime"></td>
+                <td><input type="text" id="typeOfService"></td>
+                <td><textarea id="note"> </textarea></td>
+                <td><input type="number"> UAH</td>
+                <td><input type="number"> h</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="time" id="visitTime"></td>
+                <td><input type="text" id="typeOfService"></td>
+                <td><textarea id="note"> </textarea></td>
+                <td><input type="number"> UAH</td>
+                <td><input type="number"> h</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>Add a record</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="submit" id="submitVisit" value="Submit">
+</body>
+</html>
