@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>My Clients</title>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link href="public/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="header-info">
-        <span><a href="index.html">My Profile</a></span>
-        <span> My Clients</span>
-    </div>
-    <form>
-        <input type="search" id="your-clients-filter" name="q" placeholder="Find a client...">
-        <input type="button" value="New client" onclick="window.location.href='newclient.html';">
-    </form>
-    <div class="clients-list">
-        <ul>
-            <li><a href="clientinfo.html">Vasya Pupkin</a> </li>
-            <li><a href="clientinfo.html">Nataliia Popova</a></li>
-            <li><a href="clientinfo.html">Svetlana Boyko</a></li>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Hairdresser's Clients</a>
+    <button class="navbar-toggler" data-target="#collapsibleNavbar" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">My Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="myclients.html">My Clients</a>
+            </li>
         </ul>
     </div>
+    <a class="navbar-right"  href="login.html">Log out</a>
+</nav>
+<br>
+<form>
+    <input id="your-clients-filter" name="q" placeholder="Find a client..." type="search">
+    <input onclick="window.location.href='newclient.html';" type="button" value="New client">
+</form>
+<div class="clients-list">
+    <ul>
+        <li><a href="clientinfo.html">Vasya Pupkin</a></li>
+        <li><a href="clientinfo.html">Nataliia Popova</a></li>
+        <li><a href="clientinfo.html">Svetlana Boyko</a></li>
+    </ul>
+</div>
 
 </body>
 </html>
