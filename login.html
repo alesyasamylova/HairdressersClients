@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <title>Log in</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css" rel="stylesheet">
 </head>
-<body>
-
-<form>
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-
-    <input type="text" placeholder="Enter Email" name="email" required>
-    <br>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    <br>
-    <button type="submit" class="btn">Login</button>
+<body class="text-center">
+<form class="form-signin">
+    <h1>Hairdresser's Clients App</h1>
+    <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
+    <label class="sr-only" for="inputEmail">Email</label>
+    <input autofocus="" class="form-control" id="inputEmail" placeholder="Email address" required="" type="email">
+    <label class="sr-only" for="inputPassword">Password</label>
+    <input class="form-control" id="inputPassword" placeholder="Password" required="" type="password">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
 </form>
 
 </body>
