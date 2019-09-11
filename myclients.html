@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <title>My Clients</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -23,12 +23,13 @@
             </li>
         </ul>
     </div>
-    <a class="navbar-right"  href="login.html">Log out</a>
+    <a class="navbar-right" href="login.html">Log out</a>
 </nav>
 <br>
 <form>
     <input id="your-clients-filter" name="q" placeholder="Find a client..." type="search">
-    <input onclick="window.location.href='newclient.html';" type="button" value="New client">
+    <input onclick="document.getElementById('id01').style.display='block'" style="width:auto;" type="button"
+           value="New client">
 </form>
 <div class="clients-list">
     <ul>
@@ -36,6 +37,46 @@
         <li><a href="clientinfo.html">Nataliia Popova</a></li>
         <li><a href="clientinfo.html">Svetlana Boyko</a></li>
     </ul>
+</div>
+<div class="modal" id="id01">
+    <span class="close" onclick="document.getElementById('id01').style.display='none'"
+          title="Close Modal">&times;</span>
+    <form action="/action_page.php" class="modal-content">
+        <div class="container">
+            <h1>New client</h1>
+            <p>Please fill in this form to add new client.</p>
+            <hr>
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="public/multimedia/avatar1.png" alt="Avatar" class="avatar" height="30%" width="30%">
+            </div>
+
+            <div>
+                <label><b>Gender</b></label><br>
+                <input checked="checked" name="gender" type="radio" value="female"> Female
+                <input name="gender" type="radio" value="male">Male
+            </div>
+
+            <label><b>Name</b></label>
+            <input name="name" placeholder="Enter Name" required type="text">
+
+            <label><b>Surname</b></label>
+            <input name="surnname" placeholder="Enter Surname" required type="text">
+
+            <label><b>Email</b></label>
+            <input name="email" placeholder="Enter Email" required type="text">
+
+            <label><b>Tel.</b></label>
+            <input name="phone" placeholder="Enter Phone Number" required type="tel">
+
+            <div class="clearfix">
+                <button class="cancelbtn" onclick="document.getElementById('id01').style.display='none'" type="button">
+                    Cancel
+                </button>
+                <button class="signupbtn" type="submit">Add</button>
+            </div>
+        </div>
+    </form>
 </div>
 
 </body>
