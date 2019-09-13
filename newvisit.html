@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
     <title>New visit</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -23,41 +23,39 @@
             </li>
         </ul>
     </div>
-    <a class="navbar-right"  href="login.html">Log out</a>
+    <a class="navbar-right" href="login.html">Log out</a>
 </nav>
-    <h2>Visit of <a href="clientinfo.html">Vasya Pupkin</a></h2>
-    <table>
-        <thead>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Type of Service</th>
-            <th>Note</th>
-            <th>Cost</th>
-            <th>Duration</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td><input type="date" id="visitId"></td>
-                <td><input type="time" id="visitTime"></td>
-                <td><input type="text" id="typeOfService"></td>
-                <td><textarea id="note"> </textarea></td>
-                <td><input type="number"> UAH</td>
-                <td><input type="number"> h</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="time" id="visitTime"></td>
-                <td><input type="text" id="typeOfService"></td>
-                <td><textarea id="note"> </textarea></td>
-                <td><input type="number"> UAH</td>
-                <td><input type="number"> h</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button>Add a record</button></td>
-            </tr>
-        </tbody>
-    </table>
-    <input type="submit" id="submitVisit" value="Submit">
+<form class="form-content">
+
+    <div class="container">
+        <h1>Visit of <a href="clientinfo.html">Vasya Pupkin</a></h1>
+        <p>Please fill in this form to add new visit</p>
+        <hr>
+        <label><b>Date</b></label>
+        <input name="date" placeholder="Enter Date" required type="date">
+
+        <label><b>Time</b></label>
+        <input name="time" placeholder="Enter Time" required type="time">
+
+        <label><b>Type of Service</b></label>
+        <input name="typeOfService" placeholder="Enter Type of Service" type="text">
+
+        <label><b>Note</b></label>
+        <textarea name="note"></textarea>
+
+        <label><b>Cost (in UAH)</b></label>
+        <input name="cost" placeholder="Enter Price" type="text">
+
+        <label><b>Duration (in h)</b></label>
+        <input name="duration" placeholder="Enter Duration" type="text">
+
+        <div class="clearfix">
+            <button class="cancelbtn" onclick="window.location.href='clientinfo.html'" type="button">
+                Cancel
+            </button>
+            <button class="signupbtn" type="submit">Add</button>
+        </div>
+    </div>
+</form>
 </body>
 </html>
