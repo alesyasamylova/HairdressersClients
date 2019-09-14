@@ -1,0 +1,23 @@
+{
+  "name": "hairdressersclients",
+  "version": "1.0.0",
+  "description": "This application is developed for training purpose in web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alesyasamylova/HairdressersClients.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alesyasamylova/HairdressersClients/issues"
+  },
+  "homepage": "https://github.com/alesyasamylova/HairdressersClients#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-server": "^0.11.1"
+  }
+}
