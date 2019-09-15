@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/alesyasamylova/HairdressersClients/issues"
   },
-  "homepage": "https://github.com/alesyasamylova/HairdressersClients#readme"
+  "homepage": "https://github.com/alesyasamylova/HairdressersClients#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
