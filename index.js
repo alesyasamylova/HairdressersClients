@@ -34,5 +34,9 @@ app.get('/newvisit', (req, res) => {
     res.sendFile(path.join(__dirname + '/newvisit.html'));
 });
 
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname + '/login.html'));
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
