@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>New visit</title>
+    <title>My Clients</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -28,37 +29,24 @@
     </div>
     <a class="navbar-right" href="/login">Log out</a>
 </nav>
-<form class="form-content">
-
-    <div class="container">
-        <h1>Visit of <a href="/clientinfo">Vasya Pupkin</a></h1>
-        <p>Please fill in this form to add new visit</p>
-        <hr>
-        <label><b>Date</b></label>
-        <input name="date" placeholder="Enter Date" required type="date">
-
-        <label><b>Time</b></label>
-        <input name="time" placeholder="Enter Time" required type="time">
-
-        <label><b>Type of Service</b></label>
-        <input name="typeOfService" placeholder="Enter Type of Service" type="text">
-
-        <label><b>Note</b></label>
-        <textarea name="note"></textarea>
-
-        <label><b>Cost (in UAH)</b></label>
-        <input name="cost" placeholder="Enter Price" type="text">
-
-        <label><b>Duration (in h)</b></label>
-        <input name="duration" placeholder="Enter Duration" type="text">
-
-        <div class="clearfix">
-            <button class="cancelbtn" onclick="window.location.href='/clientinfo'" type="button">
-                Cancel
-            </button>
-            <button class="signupbtn" type="submit">Add</button>
-        </div>
-    </div>
+<br>
+<form>
+    <input id="your-clients-filter" name="q" placeholder="Find a client..." type="search">
+     <a class="btn" href="/clients/add" style="width:auto; background-color: #4CAF50; color: white; border: none">New client</a>
 </form>
+<div class="clients-list">
+    <% if (clients.length > 0) {%>
+        <ul>
+            <% clients.forEach((client, index) => { %>
+                <li>
+                    <a href="/clients/<%= client.id %>"><%= client.name %> <%= client.surname %></a>
+                </li>
+            <% }) %>
+
+        </ul>
+    <% } else { %>
+        <p class="text-center">No clients found. Go <a href="/clients/add" >here</a> to add clients.</p>
+    <% } %>
+</div>
 </body>
 </html>

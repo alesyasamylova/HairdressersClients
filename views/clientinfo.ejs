@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Client's visit</title>
+    <title>Client's Info</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/index">My Profile</a>
+                <a class="nav-link" href="/">My Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/clients">My Clients</a>
@@ -28,30 +28,39 @@
     </div>
     <a class="navbar-right"  href="/login">Log out</a>
 </nav>
-    <h2>Visit of <a href="/clientinfo">Vasya Pupkin</a></h2>
-    <table>
-        <thead>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Type of Service</th>
-            <th>Note</th>
-            <th>Cost</th>
-            <th>Duration</th>
-        </thead>
-        <tbody>
-        <tr>
-            <td>18.05.2019</td>
-            <td>14:00</td>
-            <td>haircut</td>
-            <td>Standard man haircut </textarea></td>
-            <td>80 UAH</td>
-            <td>0.25 h</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button onclick="window.location.href='/newvisit'">Update visit</button></td>
-        </tr>
-        </tbody>
-    </table>
+    <h2>Client's Info</h2>
+    <div class="contact-info">
+        <table>
+            <tr>
+                <td colspan="2"> <img src="/multimedia/avatar1.png" alt="Photo" title="Client's avatar"
+                                  height="30%" width="30%"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><%= client.name %></td>
+            </tr>
+            <tr>
+                <td>Surname</td>
+                <td><%= client.surname %></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><%= client.gender %></td>
+            </tr>
+            <tr>
+                <td>Tel.</td>
+                <td><%= client.phone %></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><%= client.email %></td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <h2>Last visit:</h2>
+    <p><a href="/clients/123/visits/456">18.05.2019</a></p>
+    <p><a href="/clients/123/visits">Show all client's visits</a></p>
+    <button onclick="window.location.href='/clients/123/visits/add'">Add New Visit</button>
 </body>
 </html>
