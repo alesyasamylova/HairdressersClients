@@ -50,7 +50,7 @@ app.delete('/clients/:id/delete', deleteClient);
 
 app.get('/clients/:id/visits', clientVisitsPage);
 
-app.get('/clients/:id/visits/:id', clientVisitPage);
+app.get('/clients/:id/visits/:visit_id', clientVisitPage);
 
 app.get('/clients/:id/visits/add', addClientVisitPage);
 app.post('/clients/:id/visits/store', storeClientVisit);

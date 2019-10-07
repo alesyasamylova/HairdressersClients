@@ -1,5 +1,5 @@
 <% include partials/header.ejs %>
-    <h2>Visit of <a href="/clients/123">Vasya Pupkin</a></h2>
+    <h2>Visit of <a href="/clients/<%=visit.client_id %>/visits/<%=visit.id%>"></a> Test </h2>
     <table>
         <thead>
             <th>Date</th>
@@ -11,16 +11,16 @@
         </thead>
         <tbody>
         <tr>
-            <td>18.05.2019</td>
+            <td><%= visit.date %></td>
             <td>14:00</td>
-            <td>haircut</td>
-            <td>Standard man haircut </td>
+            <td><%= visit.description %></td>
+            <td>some text</td>
             <td>80 UAH</td>
             <td>0.25 h</td>
         </tr>
         <tr>
             <td></td>
-            <td><button onclick="window.location.href='/clients/123/visits/456/edit'">Update visit</button></td>
+            <td><button onclick="window.location.href='/clients/<%=visit.client_id%>/visits/<%=visit.id%>/edit'">Update visit</button></td>
         </tr>
         </tbody>
     </table>

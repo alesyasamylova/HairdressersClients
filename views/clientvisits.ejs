@@ -1,0 +1,17 @@
+<% include partials/header.ejs %>
+<br>
+<div class="visits-list">
+<% if (visits.length > 0) {%>
+    <ul>
+        <% visits.forEach((visit, index) => { %>
+            <br>
+            <li>
+                <a href="/clients/<%= visit.client_id %>/visits/<%=visit.id%>"><%= visit.date %> <%= visit.description %></a>
+            </li>
+        <% }) %>
+
+    </ul>
+<% } else { %>
+    <p class="text-center">No visits found. Go <a href="/clients/<%= visit.client_id %>/visits/add" >here</a> to add clients.</p>
+<% } %>
+</div>
