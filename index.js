@@ -2,8 +2,25 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const port = 8080;
+const mysql = require('mysql');
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: 'mydb'
+});
+
+con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected to database!");
+    con.query("SELECT * FROM clients", function (err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+    });
+});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/index.html'))
