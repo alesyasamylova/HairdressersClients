@@ -32,15 +32,22 @@
 <br>
 <form>
     <input id="your-clients-filter" name="q" placeholder="Find a client..." type="search">
-    <input onclick="window.location.href='/newclient'" style="width:auto; background-color: #4CAF50; color: white; border: none"
+    <input onclick="window.location.href='/newclient'"
+           style="width:auto; background-color: #4CAF50; color: white; border: none"
            type="button" value="New client">
 </form>
 <div class="clients-list">
-    <ul>
-        <li><a href="/clientinfo">Vasya Pupkin</a></li>
-        <li><a href="/clientinfo">Nataliia Popova</a></li>
-        <li><a href="/clientinfo">Svetlana Boyko</a></li>
-    </ul>
+    <% if (clients.length > 0) { %>
+        <ul>
+            <li><a href="/clientinfo">Vasya Pupkin</a></li>
+            <% clients.forEach((client, index) => { %>
+                <li><a href="/clientinfo"><%= client.name %> <%= client.surname %></a></li>
+            <% }) %>
+        </ul>
+
+    <% } else { %>
+        <p class="text-center">Clients not found</p>
+    <% } %>
 </div>
 </body>
 </html>

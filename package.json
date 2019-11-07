@@ -2,10 +2,11 @@
   "name": "hairdressersclients",
   "version": "1.0.0",
   "description": "This application is developed for training purpose in web development",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "",
-    "start": "node index.js"
+    "start": "node app.js",
+    "start:nodemon": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/alesyasamylova/HairdressersClients#readme",
   "dependencies": {
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "mysql": "^2.17.1"
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.4"
   }
 }
