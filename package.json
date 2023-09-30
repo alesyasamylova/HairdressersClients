@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/alesyasamylova/HairdressersClients#readme",
   "dependencies": {
-    "ejs": "^2.7.1",
+    "ejs": "^3.1.7",
     "express": "^4.18.2",
     "mysql": "^2.18.0",
     "nodemon": "^1.19.4"
